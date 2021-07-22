@@ -1,0 +1,87 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/wheel.png</file>
+        <file>resources/return.png</file>
+        <file>resources/info.png</file>
+        <file>resources/downarrow.png</file>
+        <file>resources/spin_up_arrow.png</file>
+        <file>resources/spin_down_arrow.png</file>
+    </qresource>
+    <qresource prefix="/music">
+        <file alias="fd1_menu">resources/music/fd1_menu.ogg</file>
+        <file alias="fd2_menu">resources/music/fd2_menu.ogg</file>
+        <file alias="fd3_menu">resources/music/fd3_menu.ogg</file>
+        <file alias="fd4_menu">resources/music/fd4_menu.ogg</file>
+    </qresource>
+    <qresource prefix="/gameselect">
+        <file alias="fd1_btn">resources/gameselect/gameselect_fd1.jpg</file>
+        <file alias="fd2_btn">resources/gameselect/gameselect_fd2.jpg</file>
+        <file alias="fd3_btn">resources/gameselect/gameselect_fd3.jpg</file>
+        <file alias="fd4_btn">resources/gameselect/gameselect_fd4.jpg</file>
+        <file alias="fd5_btn">resources/gameselect/gameselect_fd5.jpg</file>
+        <file alias="fd6_btn">resources/gameselect/gameselect_fd6.jpg</file>
+    </qresource>
+    <qresource prefix="/gameselect/grayed_out">
+        <file alias="fd1_btn">resources/gameselect/grayed_out/gameselect_fd1.jpg</file>
+        <file alias="fd2_btn">resources/gameselect/grayed_out/gameselect_fd2.jpg</file>
+        <file alias="fd3_btn">resources/gameselect/grayed_out/gameselect_fd3.jpg</file>
+        <file alias="fd4_btn">resources/gameselect/grayed_out/gameselect_fd4.jpg</file>
+        <file alias="fd5_btn">resources/gameselect/grayed_out/gameselect_fd5.jpg</file>
+        <file alias="fd6_btn">resources/gameselect/grayed_out/gameselect_fd6.jpg</file>
+    </qresource>
+    <qresource prefix="/gameselect/corrupted">
+        <file alias="fd1_btn">resources/gameselect/corrupted/gameselect_fd1.jpg</file>
+        <file alias="fd2_btn">resources/gameselect/corrupted/gameselect_fd2.jpg</file>
+        <file alias="fd3_btn">resources/gameselect/corrupted/gameselect_fd3.jpg</file>
+        <file alias="fd4_btn">resources/gameselect/corrupted/gameselect_fd4.jpg</file>
+        <file alias="fd5_btn">resources/gameselect/corrupted/gameselect_fd5.jpg</file>
+        <file alias="fd6_btn">resources/gameselect/corrupted/gameselect_fd6.jpg</file>
+    </qresource>
+    <qresource prefix="/background">
+        <file alias="fd1_bg">resources/background/fd1_bg.jpg</file>
+        <file alias="fd2_bg">resources/background/fd2_bg.jpg</file>
+        <file alias="fd3_bg">resources/background/fd3_bg.jpg</file>
+        <file alias="fd4_bg">resources/background/fd4_bg.jpg</file>
+        <file alias="fd1_bg_l">resources/background/fd1_bg_layer.png</file>
+        <file alias="fd2_bg_l">resources/background/fd2_bg_layer.png</file>
+        <file alias="fd3_bg_l">resources/background/fd3_bg_layer.png</file>
+        <file alias="fd4_bg_l">resources/background/fd4_bg_layer.png</file>
+    </qresource>
+    <qresource prefix="/fd3_anim">
+        <file alias="frame1">resources/background/fd3_anim/springanim_1.jpg</file>
+        <file alias="frame2">resources/background/fd3_anim/springanim_2.jpg</file>
+        <file alias="frame3">resources/background/fd3_anim/springanim_3.jpg</file>
+        <file alias="frame4">resources/background/fd3_anim/springanim_4.jpg</file>
+        <file alias="frame5">resources/background/fd3_anim/springanim_5.jpg</file>
+    </qresource>
+    <qresource prefix="/fd1_2_bg_static">
+        <file alias="frame1">resources/background/fd1_2_static/frame1.jpg</file>
+        <file alias="frame2">resources/background/fd1_2_static/frame2.jpg</file>
+        <file alias="frame3">resources/background/fd1_2_static/frame3.jpg</file>
+        <file alias="frame4">resources/background/fd1_2_static/frame4.jpg</file>
+        <file alias="frame5">resources/background/fd1_2_static/frame5.jpg</file>
+        <file alias="frame6">resources/background/fd1_2_static/frame6.jpg</file>
+        <file alias="frame7">resources/background/fd1_2_static/frame7.jpg</file>
+        <file alias="frame8">resources/background/fd1_2_static/frame8.jpg</file>
+    </qresource>
+    <qresource prefix="/fd3_bg_static">
+        <file alias="frame1">resources/background/fd3_static/frame1.png</file>
+        <file alias="frame2">resources/background/fd3_static/frame2.png</file>
+        <file alias="frame3">resources/background/fd3_static/frame3.png</file>
+        <file alias="frame4">resources/background/fd3_static/frame4.png</file>
+        <file alias="frame5">resources/background/fd3_static/frame5.png</file>
+        <file alias="frame6">resources/background/fd3_static/frame6.png</file>
+        <file alias="frame7">resources/background/fd3_static/frame7.png</file>
+        <file alias="frame8">resources/background/fd3_static/frame8.png</file>
+    </qresource>
+    <qresource prefix="/fd4_bg_static">
+        <file alias="frame1">resources/background/fd4_static/frame1.png</file>
+        <file alias="frame2">resources/background/fd4_static/frame2.png</file>
+        <file alias="frame3">resources/background/fd4_static/frame3.png</file>
+        <file alias="frame4">resources/background/fd4_static/frame4.png</file>
+        <file alias="frame5">resources/background/fd4_static/frame5.png</file>
+        <file alias="frame6">resources/background/fd4_static/frame6.png</file>
+        <file alias="frame7">resources/background/fd4_static/frame7.png</file>
+        <file alias="frame8">resources/background/fd4_static/frame8.png</file>
+    </qresource>
+</RCC>

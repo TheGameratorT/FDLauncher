@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GameWindow</class>
+ <widget class="QWidget" name="GameWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>650</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Five Nights at Freddy's Doom Mod Launcher</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMessageBox {
+	background-color: rgb(37, 37, 38);
+}
+QMessageBox &gt; QLabel {
+	color: white;
+}
+
+QPushButton {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop: 0 #444444, stop: 1 #222222);
+	color: #E0E1E3;
+	padding: 0px 8px;
+	border-radius: 4px;
+	border: 1px;
+	border-style: solid;
+	border-color: black;
+}
+
+QPushButton:hover {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop: 0 #222222, stop: 1 #111111);
+	border-color: #3DAEFF;
+}
+
+QPushButton:pressed {
+	background-color: #60798B;
+}
+
+QDialogButtonBox QPushButton {
+	/* Issue #194 #248 - Special case of QPushButton inside dialogs, for better UI */
+	min-width: 80px;
+	min-height: 24px;
+}
+
+QComboBox {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 1px 18px 1px 3px;
+    min-width: 6em;
+	color: white;
+}
+
+QComboBox:editable {
+    background: white;
+}
+
+QComboBox:!editable, QComboBox::drop-down:editable {
+     background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop: 0 #444444, stop: 1 #222222);
+}
+
+QComboBox:!editable:hover, QComboBox::drop-down:editable:hover {
+	border-color: #3DAEFF;
+}
+
+QComboBox:on { /* shift the text when the popup opens */
+    padding-top: 3px;
+    padding-left: 4px;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+
+    border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+}
+
+QComboBox::down-arrow {
+    image: url(:/resources/downarrow.png);
+}
+
+QComboBox::down-arrow:on { /* shift the arrow when popup is open */
+    top: 1px;
+    left: 1px;
+}
+
+QComboBox QAbstractItemView {
+    border: 1px solid black;
+	color: white;
+	background-color: #222222;
+    selection-background-color: #444444;
+}
+</string>
+  </property>
+  <widget class="QPushButton" name="sp_btn">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>250</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Play Singleplayer</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="mp_btn">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>250</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Play Multiplayer</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="sets_btn">
+   <property name="geometry">
+    <rect>
+     <x>606</x>
+     <y>256</y>
+     <width>35</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/resources/wheel.png</normaloff>:/resources/wheel.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="og_btn">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>260</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Open Game</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="back_btn">
+   <property name="geometry">
+    <rect>
+     <x>612</x>
+     <y>10</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/resources/return.png</normaloff>:/resources/return.png</iconset>
+   </property>
+  </widget>
+  <widget class="QLabel" name="fd3_anim_label">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>0</y>
+     <width>400</width>
+     <height>300</height>
+    </rect>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="static_anim_label">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>650</width>
+     <height>300</height>
+    </rect>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="bg_layer_label">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>650</width>
+     <height>300</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <zorder>fd3_anim_label</zorder>
+  <zorder>static_anim_label</zorder>
+  <zorder>bg_layer_label</zorder>
+  <zorder>sp_btn</zorder>
+  <zorder>mp_btn</zorder>
+  <zorder>back_btn</zorder>
+  <zorder>sets_btn</zorder>
+  <zorder>og_btn</zorder>
+ </widget>
+ <tabstops>
+  <tabstop>sp_btn</tabstop>
+  <tabstop>mp_btn</tabstop>
+  <tabstop>og_btn</tabstop>
+  <tabstop>sets_btn</tabstop>
+  <tabstop>back_btn</tabstop>
+ </tabstops>
+ <resources>
+  <include location="resources.qrc"/>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

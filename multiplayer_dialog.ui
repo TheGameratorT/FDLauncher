@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>multiplayer_dialog</class>
+ <widget class="QDialog" name="multiplayer_dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>326</width>
+    <height>60</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Choose an option:</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog#multiplayer_dialog {
+	background-color: rgb(0, 0, 0);
+}</string>
+  </property>
+  <widget class="QPushButton" name="join_btn">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>149</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Join a server</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="host_btn">
+   <property name="geometry">
+    <rect>
+     <x>168</x>
+     <y>10</y>
+     <width>149</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Host a server</string>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>join_btn</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
