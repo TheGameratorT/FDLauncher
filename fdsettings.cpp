@@ -23,8 +23,8 @@ FDSettings::FDSettings(int gameId, QWidget* parent)
         else
         {
             QMessageBox::critical(parent, QObject::tr("Configuration error."), QObject::tr("The configuration files are missing, please reinstall the game."));
-            QProcess::startDetached(qApp->arguments()[0], qApp->arguments());
-			QApplication::quit();
+			QProcess::startDetached(qApp->arguments()[0], qApp->arguments());
+			exit(0);
 		}
     }
 }
@@ -43,7 +43,7 @@ FDSettings::SettingsData FDSettings::getSettingsData(bool defaultSets)
 	{
 		QMessageBox::critical(parent, QObject::tr("Configuration error."), QObject::tr("An error occured trying to open the configuration."));
 		QProcess::startDetached(qApp->arguments()[0], qApp->arguments());
-		QApplication::quit();
+		exit(0);
 	}
 
     sd.gl_ssao = QString::fromStdString(ini["GlobalSettings"]["gl_ssao"]).toInt();
@@ -69,7 +69,7 @@ void FDSettings::setSettingsData(FDSettings::SettingsData sd)
 	{
 		QMessageBox::critical(parent, QObject::tr("Configuration error."), QObject::tr("An error occured trying to open the configuration."));
 		QProcess::startDetached(qApp->arguments()[0], qApp->arguments());
-		QApplication::quit();
+		exit(0);
 	}
 
     ini["GlobalSettings"]["gl_ssao"] = QString::number(sd.gl_ssao).toStdString();
