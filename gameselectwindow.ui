@@ -229,10 +229,17 @@ QTextBrowser {
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: #FF802B;</string>
+     <string notr="true">QPushButton
+{
+    color: #FF802B;
+}
+
+QPushButton:pressed {
+	background-color: #444444;
+}</string>
     </property>
     <property name="text">
-     <string>https://www.youtube.com/SkorneDemon</string>
+     <string>Mod by SkorneDemon</string>
     </property>
    </widget>
   </widget>

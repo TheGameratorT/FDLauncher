@@ -114,7 +114,10 @@ void GameSelectWindow::gameButtonClicked()
 
 void GameSelectWindow::on_patreon_link_clicked()
 {
+	/*
+	 * just make the button do nothing and call it a day
 	QDesktopServices::openUrl(ui->patreon_link->text());
+	*/
 }
 
 void GameSelectWindow::on_info_btn_clicked()
