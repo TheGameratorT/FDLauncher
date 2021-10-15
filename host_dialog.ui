@@ -102,7 +102,7 @@ QTabBar::tab {
     </rect>
    </property>
    <property name="currentIndex">
-    <number>3</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="fd1_tab">
     <attribute name="title">
@@ -306,6 +306,11 @@ QTabBar::tab {
      <item>
       <property name="text">
        <string>Night 5</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Night ???</string>
       </property>
      </item>
      <item>

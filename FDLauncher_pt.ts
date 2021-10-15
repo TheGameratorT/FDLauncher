@@ -9,9 +9,9 @@
         <translation>Escolha um jogo!</translation>
     </message>
     <message>
-        <location filename="gameselectwindow.ui" line="235"/>
-        <source>https://www.youtube.com/SkorneDemon</source>
-        <translation></translation>
+        <location filename="gameselectwindow.ui" line="242"/>
+        <source>Mod by SkorneDemon</source>
+        <translation>Mod por SkorneDemon</translation>
     </message>
     <message>
         <location filename="gameselectwindow.cpp" line="75"/>
@@ -205,7 +205,7 @@ Detalhes do erro:
         <location filename="host_dialog.ui" line="132"/>
         <location filename="host_dialog.ui" line="195"/>
         <location filename="host_dialog.ui" line="288"/>
-        <location filename="host_dialog.ui" line="346"/>
+        <location filename="host_dialog.ui" line="351"/>
         <source>Night 1</source>
         <translation>Noite 1</translation>
     </message>
@@ -213,7 +213,7 @@ Detalhes do erro:
         <location filename="host_dialog.ui" line="137"/>
         <location filename="host_dialog.ui" line="200"/>
         <location filename="host_dialog.ui" line="293"/>
-        <location filename="host_dialog.ui" line="351"/>
+        <location filename="host_dialog.ui" line="356"/>
         <source>Night 2</source>
         <translation>Noite 2</translation>
     </message>
@@ -221,7 +221,7 @@ Detalhes do erro:
         <location filename="host_dialog.ui" line="142"/>
         <location filename="host_dialog.ui" line="205"/>
         <location filename="host_dialog.ui" line="298"/>
-        <location filename="host_dialog.ui" line="356"/>
+        <location filename="host_dialog.ui" line="361"/>
         <source>Night 3</source>
         <translation>Noite 3</translation>
     </message>
@@ -229,7 +229,7 @@ Detalhes do erro:
         <location filename="host_dialog.ui" line="147"/>
         <location filename="host_dialog.ui" line="210"/>
         <location filename="host_dialog.ui" line="303"/>
-        <location filename="host_dialog.ui" line="361"/>
+        <location filename="host_dialog.ui" line="366"/>
         <source>Night 4</source>
         <translation>Noite 4</translation>
     </message>
@@ -237,22 +237,22 @@ Detalhes do erro:
         <location filename="host_dialog.ui" line="152"/>
         <location filename="host_dialog.ui" line="215"/>
         <location filename="host_dialog.ui" line="308"/>
-        <location filename="host_dialog.ui" line="366"/>
+        <location filename="host_dialog.ui" line="371"/>
         <source>Night 5</source>
         <translation>Noite 5</translation>
     </message>
     <message>
         <location filename="host_dialog.ui" line="157"/>
         <location filename="host_dialog.ui" line="220"/>
-        <location filename="host_dialog.ui" line="371"/>
+        <location filename="host_dialog.ui" line="376"/>
         <source>Night 6</source>
         <translation>Noite 6</translation>
     </message>
     <message>
         <location filename="host_dialog.ui" line="176"/>
         <location filename="host_dialog.ui" line="269"/>
-        <location filename="host_dialog.ui" line="327"/>
-        <location filename="host_dialog.ui" line="385"/>
+        <location filename="host_dialog.ui" line="332"/>
+        <location filename="host_dialog.ui" line="390"/>
         <source>Scene:</source>
         <translation>Cena:</translation>
     </message>
@@ -308,46 +308,51 @@ Detalhes do erro:
     </message>
     <message>
         <location filename="host_dialog.ui" line="313"/>
+        <source>Night ???</source>
+        <translation>Noite ???</translation>
+    </message>
+    <message>
+        <location filename="host_dialog.ui" line="318"/>
         <source>Night Ed</source>
         <translation>Noite Ed</translation>
     </message>
     <message>
-        <location filename="host_dialog.ui" line="333"/>
+        <location filename="host_dialog.ui" line="338"/>
         <source>FNAF 4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="host_dialog.ui" line="400"/>
+        <location filename="host_dialog.ui" line="405"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location filename="host_dialog.ui" line="413"/>
+        <location filename="host_dialog.ui" line="418"/>
         <source>Host</source>
         <translation>Hospedar</translation>
     </message>
     <message>
-        <location filename="host_dialog.ui" line="426"/>
+        <location filename="host_dialog.ui" line="431"/>
         <source>Number of players:</source>
         <translation>Número de jogadores:</translation>
     </message>
     <message>
-        <location filename="host_dialog.ui" line="455"/>
+        <location filename="host_dialog.ui" line="460"/>
         <source>Netmode:</source>
         <translation>Modo rede:</translation>
     </message>
     <message>
-        <location filename="host_dialog.ui" line="469"/>
+        <location filename="host_dialog.ui" line="474"/>
         <source>Peer-to-Peer</source>
         <translation>Ponto-a-Ponto</translation>
     </message>
     <message>
-        <location filename="host_dialog.ui" line="474"/>
+        <location filename="host_dialog.ui" line="479"/>
         <source>Packet Server</source>
         <translation>Servidor de Pacotes</translation>
     </message>
     <message>
-        <location filename="host_dialog.ui" line="488"/>
+        <location filename="host_dialog.ui" line="493"/>
         <source>Port:</source>
         <translation>Porta:</translation>
     </message>
