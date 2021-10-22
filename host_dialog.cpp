@@ -6,7 +6,7 @@
 static QString map_for_selection[4][13] = {
     {"e1m1", "e1m0", "e1m2", "e1m3", "e1m4", "e1m5", "e1m6", "e1m7", "e1m8"},
     {"e1m1", "e1m2", "e1m3", "e1m4", "e1m5", "e1m6", "e2m1", "e2m2", "e2m3", "e2m4", "e2m5", "e2m6", "e2m7"},
-	{"e1m1", "e1m2", "e1m3", "e1m4", "e1m5", "e1m7", "e1m8"},
+	{"e1m1", "e1m2", "e1m3", "e1m4", "e1m5", "e1m6", "e1m7", "e1m8"},
     {"e1m1", "e1m2", "e1m3", "e1m4", "e1m5", "e1m6"}
 };
 

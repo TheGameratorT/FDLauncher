@@ -310,6 +310,11 @@ QTabBar::tab {
      </item>
      <item>
       <property name="text">
+       <string>Night 6</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
        <string>Night ???</string>
       </property>
      </item>

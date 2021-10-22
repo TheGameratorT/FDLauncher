@@ -85,7 +85,7 @@ void GameSelectWindow::gameButtonClicked()
         break;
     }
     case launcher::installState::unreleased:
-        QMessageBox::information(this, tr("Not released."), tr("Not released yet, consider following:\nhttps://www.youtube.com/SkorneDemon\n\nThank you!"));
+		QMessageBox::information(this, tr("Not available."), tr("Not released."));
         break;
     }
 
