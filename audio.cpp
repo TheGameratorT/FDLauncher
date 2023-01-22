@@ -24,7 +24,7 @@ static std::size_t read_ogg_callback(void* ptr, std::size_t size, std::size_t nm
 	if(reader->cursor + length > reader->dataSize)
 		length = reader->dataSize - reader->cursor;
 
-	std::memcpy(ptr, &reader->data[reader->cursor], length);
+    memcpy(ptr, &reader->data[reader->cursor], length);
 	reader->cursor += length;
 
 	return length;

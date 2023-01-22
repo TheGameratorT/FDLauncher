@@ -8,6 +8,9 @@
 
 #include <QFile>
 #include <QPainter>
+#ifndef _WIN32
+#include <QScreen>
+#endif
 
 static int bg_static_anim_speed_for_game[6] = {25, 25, 50, 100, 25, 25};
 static QString bg_static_anim_path_for_game[6] = {
@@ -27,6 +30,9 @@ GameWindow::GameWindow(QWidget *parent) :
     ui->setupUi(this);
     this->setFixedSize(this->size());
     this->setAttribute(Qt::WA_DeleteOnClose);
+#ifndef _WIN32
+    this->move(QApplication::primaryScreen()->geometry().center() - this->rect().center());
+#endif
 
     fd3_anim_index = 0;
     static_anim_frame = 0;

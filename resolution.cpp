@@ -1,5 +1,9 @@
 #include "resolution.h"
 
+#ifdef _WIN32
+
+#include <windows.h>
+
 QVector<resolution::DisplayResolution> resolution::getAvailableDisplayResolutions()
 {
     DISPLAY_DEVICE disp;
@@ -62,3 +66,47 @@ QVector<resolution::DisplayResolution> resolution::getAvailableDisplayResolution
     }
     return added;
 }
+
+#else
+
+#include <QMessageBox>
+#include <X11/extensions/Xrandr.h>
+
+QVector<resolution::DisplayResolution> resolution::getAvailableDisplayResolutions()
+{
+    QVector<resolution::DisplayResolution> result;
+
+    Display* dpy = XOpenDisplay(nullptr);
+    int screen = DefaultScreen(dpy);
+    Window root = RootWindow(dpy, screen);
+
+    int	eventBase, errorBase, major, minor;
+    if (!XRRQueryExtension(dpy, &eventBase, &errorBase) || !XRRQueryVersion(dpy, &major, &minor))
+    {
+        QMessageBox::warning(nullptr, "Warning", "Could not fetch available resolutions.\n\nReason: RandR extension missing");
+        return result;
+    }
+
+    XRRScreenResources* res = XRRGetScreenResourcesCurrent(dpy, root);
+
+    for (int m = 0; m < res->nmode; m++)
+    {
+        XRRModeInfo* mode = &res->modes[m];
+
+        bool alreadyInList = false;
+        for (resolution::DisplayResolution r : result)
+        {
+            if (r.width == mode->width && r.height == mode->height)
+            {
+                alreadyInList = true;
+                break;
+            }
+        }
+        if (!alreadyInList)
+            result.append(resolution::DisplayResolution(mode->width, mode->height));
+    }
+
+    return result;
+}
+
+#endif

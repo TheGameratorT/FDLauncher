@@ -15,7 +15,7 @@ launcher::installData ReadInstallDataToStruct(int gameId)
 {
     launcher::installData data;
 
-    QString gameDir = exeDir + "/game/wads/fd" + QString::number(gameId);
+    QString gameDir = exeDir + "/game/wads/FD" + QString::number(gameId);
 
     QFile file(gameDir + "/install.dat");
     if(!file.open(QIODevice::ReadOnly)) {
@@ -58,7 +58,7 @@ void launcher::updateInstallDataForGame(int gameId)
         return;
     }
 
-    QString gameDir = exeDir + "/game/wads/fd" + QString::number(gameId);
+    QString gameDir = exeDir + "/game/wads/FD" + QString::number(gameId);
 
     if(QFile::exists(gameDir + "/install.dat"))
     {
@@ -93,9 +93,10 @@ bool launcher::launchGame(launcher::startupData startData, QWidget* parent)
 	FDSettings fdsets(launcher::currentGame, parent);
     FDSettings::SettingsData sd = fdsets.getSettingsData();
 
-    QString args;
+    QStringList args;
 
-    args += "-file \"" + exeDir + "/game/wads/global/*\" ";
+    args += "-file";
+    args += (exeDir + "/game/wads/Global/*");
 
     for(int i = 0; i < installDataForGame[currentGame].fileNames.count(); i++)
     {
@@ -103,55 +104,43 @@ bool launcher::launchGame(launcher::startupData startData, QWidget* parent)
         if(fileName.contains("|MATERIALS") && sd.materials)
         {
             fileName = fileName.remove("|MATERIALS");
-            args += "-file \"";
-            args += fileName;
-            args += "\" ";
         }
         else if(fileName.contains("|LOWPOLY") && sd.lowpoly)
         {
             fileName = fileName.remove("|LOWPOLY");
-            args += "-file \"";
-            args += fileName;
-            args += "\" ";
         }
-        else
-        {
-            args += "-file \"";
-            args += fileName;
-            args += "\" ";
-        }
+        args += "-file";
+        args += fileName;
     }
 
-    args += "-skill 1 ";
-    args += "-config \"" + fdsets.getSetsFile() + "\" ";
+    args += "-skill";
+    args += "1";
+    args += "-config";
+    args += fdsets.getSetsFile();
 
     switch(startData.type)
     {
     case startupData::startupType::singleplayer:
-        args += "-host 1 ";
-        args += "-map e1m1 ";
+        args += "-host";
+        args += "1";
+        args += "-map";
+        args += "e1m1";
         break;
     case startupData::startupType::host:
-        args += "-host ";
+        args += "-host";
         args += QString::number(startData.playerCount);
-        args += " ";
-        args += "+map ";
+        args += "+map";
         args += startData.map;
-        args += " ";
-        args += "-netmode ";
+        args += "-netmode";
         args += QString::number(startData.netmode);
-        args += " ";
-        args += "-port ";
+        args += "-port";
         args += QString::number(startData.port);
-        args += " ";
         break;
     case startupData::startupType::join:
-        args += "-join ";
+        args += "-join";
         args += startData.ip;
-        args += " ";
-        args += "-port ";
+        args += "-port";
         args += QString::number(startData.port);
-        args += " ";
         break;
     default:
         break;
@@ -159,7 +148,7 @@ bool launcher::launchGame(launcher::startupData startData, QWidget* parent)
 
     QProcess* gzdoom = new QProcess();
     gzdoom->setProgram(exeDir + "/game/gzdoom");
-    gzdoom->setNativeArguments(args);
+    gzdoom->setArguments(args);
     if(gzdoom->startDetached())
         return true;
     else

@@ -3,7 +3,6 @@
 
 #include <QCoreApplication>
 
-#include <windows.h>
 #include <stdio.h>
 
 #define DEFAULT_DISPLAY_WIDTH 0

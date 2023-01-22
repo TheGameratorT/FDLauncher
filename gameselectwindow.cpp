@@ -9,6 +9,9 @@
 #include <QMessageBox>
 #include <QDesktopServices>
 #include <QUrl>
+#ifndef _WIN32
+#include <QScreen>
+#endif
 
 GameSelectWindow* GameSelectWindow::instance;
 
@@ -21,6 +24,9 @@ GameSelectWindow::GameSelectWindow(QWidget *parent)
 
     ui->setupUi(this);
 	this->setFixedSize(this->size());
+#ifndef _WIN32
+    this->move(QApplication::primaryScreen()->geometry().center() - this->rect().center());
+#endif
 
 	audioDevice.openDevice();
 

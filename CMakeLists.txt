@@ -13,58 +13,73 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt5 COMPONENTS Core Gui Widgets LinguistTools REQUIRED)
 
-if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+if (WIN32)
 
-# find the required packages
-find_package(OpenAL CONFIG REQUIRED)
-find_package(Vorbis CONFIG REQUIRED)
+    if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+
+    # find the required packages
+    find_package(OpenAL CONFIG REQUIRED)
+    find_package(Vorbis CONFIG REQUIRED)
+
+    else()
+
+    # tell openal that the static lib is in use
+    add_definitions(-DAL_LIBTYPE_STATIC)
+
+    set(LIB_DIR "${PROJECT_SOURCE_DIR}/libs")
+    if(CMAKE_SIZEOF_VOID_P STREQUAL "4")
+            set(LIB_ARCH "x86")
+    else()
+            set(LIB_ARCH "x64")
+    endif()
+    if (MSVC)
+            set(LIB_SUFFIX ".lib")
+    else()
+            set(LIB_SUFFIX ".a")
+    endif()
+
+    add_library(OpenAL::OpenAL STATIC IMPORTED)
+    set_target_properties(OpenAL::OpenAL PROPERTIES
+            IMPORTED_LOCATION "${LIB_DIR}/OpenAL/${LIB_ARCH}/OpenAL32${LIB_SUFFIX}"
+            INTERFACE_INCLUDE_DIRECTORIES "${LIB_DIR}/OpenAL/include"
+    )
+
+    add_library(Ogg::ogg STATIC IMPORTED)
+    set_target_properties(Ogg::ogg PROPERTIES
+            IMPORTED_LOCATION "${LIB_DIR}/libogg/${LIB_ARCH}/ogg${LIB_SUFFIX}"
+            INTERFACE_INCLUDE_DIRECTORIES "${LIB_DIR}/libogg/include"
+    )
+
+    add_library(Vorbis::vorbis STATIC IMPORTED)
+    set_target_properties(Vorbis::vorbis PROPERTIES
+            IMPORTED_LOCATION "${LIB_DIR}/libvorbis/${LIB_ARCH}/vorbis${LIB_SUFFIX}"
+            INTERFACE_INCLUDE_DIRECTORIES "${LIB_DIR}/libvorbis/include"
+    )
+
+    add_library(Vorbis::vorbisenc STATIC IMPORTED)
+    set_target_properties(Vorbis::vorbisenc PROPERTIES
+            IMPORTED_LOCATION "${LIB_DIR}/libvorbis/${LIB_ARCH}/vorbisenc${LIB_SUFFIX}"
+            INTERFACE_INCLUDE_DIRECTORIES "${LIB_DIR}/libvorbis/include"
+    )
+
+    add_library(Vorbis::vorbisfile STATIC IMPORTED)
+    set_target_properties(Vorbis::vorbisfile PROPERTIES
+            IMPORTED_LOCATION "${LIB_DIR}/libvorbis/${LIB_ARCH}/vorbisfile${LIB_SUFFIX}"
+            INTERFACE_INCLUDE_DIRECTORIES "${LIB_DIR}/libvorbis/include"
+    )
+
+    endif()
 
 else()
 
-# tell openal that the static lib is in use
-add_definitions(-DAL_LIBTYPE_STATIC)
-
-set(LIB_DIR "${PROJECT_SOURCE_DIR}/libs")
-if(CMAKE_SIZEOF_VOID_P STREQUAL "4")
-        set(LIB_ARCH "x86")
-else()
-        set(LIB_ARCH "x64")
-endif()
-if (MSVC)
-        set(LIB_SUFFIX ".lib")
-else()
-        set(LIB_SUFFIX ".a")
-endif()
-
-add_library(OpenAL::OpenAL STATIC IMPORTED)
-set_target_properties(OpenAL::OpenAL PROPERTIES
-        IMPORTED_LOCATION "${LIB_DIR}/OpenAL/${LIB_ARCH}/OpenAL32${LIB_SUFFIX}"
-        INTERFACE_INCLUDE_DIRECTORIES "${LIB_DIR}/OpenAL/include"
-)
-
-add_library(Ogg::ogg STATIC IMPORTED)
-set_target_properties(Ogg::ogg PROPERTIES
-        IMPORTED_LOCATION "${LIB_DIR}/libogg/${LIB_ARCH}/ogg${LIB_SUFFIX}"
-        INTERFACE_INCLUDE_DIRECTORIES "${LIB_DIR}/libogg/include"
-)
-
-add_library(Vorbis::vorbis STATIC IMPORTED)
-set_target_properties(Vorbis::vorbis PROPERTIES
-        IMPORTED_LOCATION "${LIB_DIR}/libvorbis/${LIB_ARCH}/vorbis${LIB_SUFFIX}"
-        INTERFACE_INCLUDE_DIRECTORIES "${LIB_DIR}/libvorbis/include"
-)
-
-add_library(Vorbis::vorbisenc STATIC IMPORTED)
-set_target_properties(Vorbis::vorbisenc PROPERTIES
-        IMPORTED_LOCATION "${LIB_DIR}/libvorbis/${LIB_ARCH}/vorbisenc${LIB_SUFFIX}"
-        INTERFACE_INCLUDE_DIRECTORIES "${LIB_DIR}/libvorbis/include"
-)
-
-add_library(Vorbis::vorbisfile STATIC IMPORTED)
-set_target_properties(Vorbis::vorbisfile PROPERTIES
-        IMPORTED_LOCATION "${LIB_DIR}/libvorbis/${LIB_ARCH}/vorbisfile${LIB_SUFFIX}"
-        INTERFACE_INCLUDE_DIRECTORIES "${LIB_DIR}/libvorbis/include"
-)
+    find_package(PkgConfig REQUIRED)
+    pkg_check_modules(OpenAL REQUIRED IMPORTED_TARGET openal)
+    pkg_check_modules(Ogg REQUIRED IMPORTED_TARGET ogg)
+    pkg_check_modules(Vorbis REQUIRED IMPORTED_TARGET vorbis)
+    pkg_check_modules(VorbisEnc REQUIRED IMPORTED_TARGET vorbisenc)
+    pkg_check_modules(VorbisFile REQUIRED IMPORTED_TARGET vorbisfile)
+    pkg_check_modules(Xrandr REQUIRED IMPORTED_TARGET xrandr)
+    pkg_check_modules(Xrender REQUIRED IMPORTED_TARGET xrender)
 
 endif()
 
@@ -108,6 +123,8 @@ set(PROJECT_SOURCES
 
 add_executable(FDLauncher WIN32 ${PROJECT_SOURCES})
 
+if (WIN32)
+
 target_link_libraries(FDLauncher PRIVATE
     winmm
     user32
@@ -118,6 +135,21 @@ target_link_libraries(FDLauncher PRIVATE
     Vorbis::vorbisenc
     Vorbis::vorbisfile
 )
+
+else()
+
+target_link_libraries(FDLauncher PRIVATE
+    Qt5::Widgets
+    PkgConfig::OpenAL
+    PkgConfig::Ogg
+    PkgConfig::Vorbis
+    PkgConfig::VorbisEnc
+    PkgConfig::VorbisFile
+    PkgConfig::Xrandr
+    PkgConfig::Xrender
+)
+
+endif()
 
 set_target_properties(FDLauncher PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER com.thegameratort.FDLauncher

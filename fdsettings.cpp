@@ -37,7 +37,7 @@ FDSettings::SettingsData FDSettings::getSettingsData(bool defaultSets)
     SettingsData sd;
     QString setsFilePath = defaultSets ? getSetsPrefix() + ".ini" : getSetsFile();
 
-	mINI::INIFile file(setsFilePath.toStdWString());
+    mINI::INIFile file(setsFilePath.toStdString());
 	mINI::INIStructure ini;
 	if (!file.read(ini))
 	{
@@ -63,7 +63,7 @@ FDSettings::SettingsData FDSettings::getSettingsData(bool defaultSets)
 
 void FDSettings::setSettingsData(FDSettings::SettingsData sd)
 {
-	mINI::INIFile file(getSetsFile().toStdWString());
+    mINI::INIFile file(getSetsFile().toStdString());
     mINI::INIStructure ini;
 	if (!file.read(ini))
 	{

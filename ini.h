@@ -91,7 +91,7 @@
 #include <vector>
 #include <memory>
 #include <fstream>
-#include <sys/stat.h>
+#include <QFile>
 
 namespace mINI
 {
@@ -368,7 +368,7 @@ namespace mINI
 		}
 
 	public:
-		INIReader(std::wstring const& filename, bool keepLineData = false)
+        INIReader(std::string const& filename, bool keepLineData = false)
 		{
 			fileReadStream.open(filename, std::ios::in | std::ios::binary);
 			if (keepLineData)
@@ -427,9 +427,9 @@ namespace mINI
 	public:
 		bool prettyPrint = false;
 
-		INIGenerator(std::wstring const& filename)
+        INIGenerator(std::string const& filename)
 		{
-			fileWriteStream.open(filename, std::ios::out | std::ios::binary);
+            fileWriteStream.open(filename, std::ios::out | std::ios::binary);
 		}
 		~INIGenerator() { }
 
@@ -493,7 +493,7 @@ namespace mINI
 		using T_LineData = std::vector<std::string>;
 		using T_LineDataPtr = std::shared_ptr<T_LineData>;
 
-		std::wstring filename;
+        std::string filename;
 
 		T_LineData getLazyOutput(T_LineDataPtr const& lineData, INIStructure& data, INIStructure& original)
 		{
@@ -654,18 +654,16 @@ namespace mINI
 	public:
 		bool prettyPrint = false;
 
-		INIWriter(std::wstring const& filename)
+        INIWriter(std::string const& filename)
 		: filename(filename)
 		{
 		}
 		~INIWriter() { }
 
 		bool operator<<(INIStructure& data)
-		{
-			struct _stat buf;
-			bool fileExists = (_wstat(filename.c_str(), &buf) == 0);
-			if (!fileExists)
-			{
+        {
+            if (!QFile::exists(filename.c_str()))
+            {
 				INIGenerator generator(filename);
 				generator.prettyPrint = prettyPrint;
 				return generator << data;
@@ -710,10 +708,10 @@ namespace mINI
 	class INIFile
 	{
 	private:
-		std::wstring filename;
+        std::string filename;
 
 	public:
-		INIFile(std::wstring const& filename)
+        INIFile(std::string const& filename)
 		: filename(filename)
 		{ }
 
