@@ -9,23 +9,23 @@ class host_dialog;
 
 class host_dialog : public QDialog
 {
-    Q_OBJECT
+	Q_OBJECT
 
 public:
-    explicit host_dialog(QWidget *parent = nullptr);
-    ~host_dialog();
+	explicit host_dialog(QWidget *parent = nullptr);
+	~host_dialog();
 
 private slots:
-    void on_host_btn_clicked();
+	void on_host_btn_clicked();
 
-    void on_cancel_btn_clicked();
+	void on_cancel_btn_clicked();
 
-    void on_netmodewarn_btn_clicked();
+	void on_netmodewarn_btn_clicked();
 
-    void on_netmode_cb_currentIndexChanged(int index);
+	void on_netmode_cb_currentIndexChanged(int index);
 
 private:
-    Ui::host_dialog *ui;
+	Ui::host_dialog *ui;
 };
 
 #endif // HOST_DIALOG_H

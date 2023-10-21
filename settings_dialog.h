@@ -12,19 +12,19 @@ class settings_dialog;
 
 class settings_dialog : public QDialog
 {
-    Q_OBJECT
+	Q_OBJECT
 
 public:
-    explicit settings_dialog(QWidget *parent = nullptr);
-    ~settings_dialog();
+	explicit settings_dialog(QWidget *parent = nullptr);
+	~settings_dialog();
 
 private slots:
-    void on_buttonBox_clicked(QAbstractButton *button);
+	void on_buttonBox_clicked(QAbstractButton *button);
 
 private:
-    Ui::settings_dialog *ui;
+	Ui::settings_dialog *ui;
 
-    void fillWidgetsWithSets(bool defSets);
+	void fillWidgetsWithSets(bool defSets);
 
 	QVector<resolution::DisplayResolution> resForIndex;
 };

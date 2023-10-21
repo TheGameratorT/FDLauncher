@@ -12,18 +12,18 @@ QT_END_NAMESPACE
 
 class GameSelectWindow : public QMainWindow
 {
-    Q_OBJECT
+	Q_OBJECT
 
 public:
-    GameSelectWindow(QWidget *parent = nullptr);
-    ~GameSelectWindow();
+	GameSelectWindow(QWidget *parent = nullptr);
+	~GameSelectWindow();
 
-    static GameSelectWindow* instance;
+	static GameSelectWindow* instance;
 
 	AudioFader audioFader;
 
 private:
-    Ui::GameSelectWindow *ui;
+	Ui::GameSelectWindow *ui;
 
 	AudioDevice audioDevice;
 
@@ -32,12 +32,12 @@ private:
 	void closeEvent(QCloseEvent* event);
 
 private slots:
-    void gameButtonClicked();
+	void gameButtonClicked();
 
-    void showEvent(QShowEvent*);
+	void showEvent(QShowEvent*);
 	void on_info_btn_clicked();
 	void on_patreon_link_clicked();
-    void on_youtube_btn_clicked();
-    void on_patreon_btn_clicked();
+	void on_youtube_btn_clicked();
+	void on_patreon_btn_clicked();
 };
 #endif // GAMESELECTWINDOW_H

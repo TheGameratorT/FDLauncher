@@ -14,27 +14,27 @@ class resolution
 {
 public:
 
-    struct DisplayResolution
-    {
-        DisplayResolution( int _width = DEFAULT_DISPLAY_WIDTH,
-                           int _height = DEFAULT_DISPLAY_HEIGHT)
-        {
-            width = _width;
-            height = _height;
-        }
+	struct DisplayResolution
+	{
+		DisplayResolution( int _width = DEFAULT_DISPLAY_WIDTH,
+						   int _height = DEFAULT_DISPLAY_HEIGHT)
+		{
+			width = _width;
+			height = _height;
+		}
 
-        bool operator==(const DisplayResolution& other) const
-        {
-            return width == other.width &&
-                   height == other.height;
-        }
+		bool operator==(const DisplayResolution& other) const
+		{
+			return width == other.width &&
+				   height == other.height;
+		}
 
-        int width;
-        int height;
+		int width;
+		int height;
 
-    };
+	};
 
-    static QVector<DisplayResolution> getAvailableDisplayResolutions();
+	static QVector<DisplayResolution> getAvailableDisplayResolutions();
 };
 
 #endif // RESOLUTION_H

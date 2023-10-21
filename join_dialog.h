@@ -9,19 +9,19 @@ class join_dialog;
 
 class join_dialog : public QDialog
 {
-    Q_OBJECT
+	Q_OBJECT
 
 public:
-    explicit join_dialog(QWidget *parent = nullptr);
-    ~join_dialog();
+	explicit join_dialog(QWidget *parent = nullptr);
+	~join_dialog();
 
 private slots:
-    void on_ok_btn_clicked();
+	void on_ok_btn_clicked();
 
-    void on_cancel_btn_clicked();
+	void on_cancel_btn_clicked();
 
 private:
-    Ui::join_dialog *ui;
+	Ui::join_dialog *ui;
 };
 
 #endif // JOIN_DIALOG_H
