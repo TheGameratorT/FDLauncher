@@ -173,7 +173,7 @@ QTabBar::tab {
       </rect>
      </property>
      <property name="text">
-      <string>Scene:</string>
+      <string>Map:</string>
      </property>
     </widget>
    </widget>
@@ -266,7 +266,7 @@ QTabBar::tab {
       </rect>
      </property>
      <property name="text">
-      <string>Scene:</string>
+      <string>Map:</string>
      </property>
     </widget>
    </widget>
@@ -334,7 +334,7 @@ QTabBar::tab {
       </rect>
      </property>
      <property name="text">
-      <string>Scene:</string>
+      <string>Map:</string>
      </property>
     </widget>
    </widget>
@@ -392,7 +392,7 @@ QTabBar::tab {
       </rect>
      </property>
      <property name="text">
-      <string>Scene:</string>
+      <string>Map:</string>
      </property>
     </widget>
    </widget>
@@ -514,6 +514,23 @@ QTabBar::tab {
     <number>5029</number>
    </property>
   </widget>
+  <widget class="QPushButton" name="netmodewarn_btn">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>41</y>
+     <width>32</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Not recommended</string>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/resources/warning.png</normaloff>:/resources/warning.png</iconset>
+   </property>
+  </widget>
  </widget>
  <tabstops>
   <tabstop>nplayers_sb</tabstop>
@@ -527,6 +544,8 @@ QTabBar::tab {
   <tabstop>fd3_map_cb</tabstop>
   <tabstop>fd4_map_cb</tabstop>
  </tabstops>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

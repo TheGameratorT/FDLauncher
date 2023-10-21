@@ -45,7 +45,8 @@ public:
     static int currentGame;
     static installData installDataForGame[7]; //+1 because of padding
     static void updateInstallDataForGame(int gameId);
-    static bool launchGame(startupData startData, QWidget* parent = nullptr);
+    static bool launchGame(const startupData& startData, QWidget* parent = nullptr);
+    static bool enableCheatsKeyDown();
 };
 
 #endif // LAUNCHER_H

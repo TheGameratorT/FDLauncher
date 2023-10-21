@@ -3,7 +3,6 @@
 
 #include "launcher.h"
 #include "gamewindow.h"
-#include "infodialog.h"
 
 #include <QPropertyAnimation>
 #include <QMessageBox>
@@ -27,6 +26,10 @@ GameSelectWindow::GameSelectWindow(QWidget *parent)
 #ifndef _WIN32
     this->move(QApplication::primaryScreen()->geometry().center() - this->rect().center());
 #endif
+
+    // Hide FD5 and FD6 widgets, but keep them just in case
+    ui->fd5_btn->setVisible(false);
+    ui->fd6_btn->setVisible(false);
 
 	audioDevice.openDevice();
 
@@ -126,10 +129,25 @@ void GameSelectWindow::on_patreon_link_clicked()
 	*/
 }
 
+void GameSelectWindow::on_youtube_btn_clicked()
+{
+    QDesktopServices::openUrl(QUrl("https://www.youtube.com/SkorneDemon"));
+}
+
+void GameSelectWindow::on_patreon_btn_clicked()
+{
+    QDesktopServices::openUrl(QUrl("https://www.patreon.com/Skornedemon"));
+}
+
 void GameSelectWindow::on_info_btn_clicked()
 {
-	InfoDialog infoDialog;
-	infoDialog.exec();
+    QMessageBox::about(this, tr("About FDLauncher"), tr(
+"<p><strong>Five Nights at Freddy&#39;s Doom Launcher</strong></p>"
+"<p>Coded by TheGameratorT</p>"
+"<p>&nbsp;</p>"
+"<p>Built with Qt 5.12.2, libvorbis, libogg and OpenAL Soft.</p>"
+"<p><a style=\"color: #FF802B;\" href=\"https://github.com/TheGameratorT/FDLauncher\">https://github.com/TheGameratorT/FDLauncher</a></p>"
+));
 }
 
 void GameSelectWindow::closeEvent(QCloseEvent* event)

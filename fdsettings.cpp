@@ -9,6 +9,12 @@
 #include <QObject>
 #include <QDir>
 
+#ifdef _WIN32
+#define TO_INI_FILE_PATH(x) (x.toStdWString())
+#else
+#define TO_INI_FILE_PATH(x) (x.toStdString())
+#endif
+
 FDSettings::FDSettings(int gameId, QWidget* parent)
 {
     this->gameId = gameId;
@@ -37,7 +43,7 @@ FDSettings::SettingsData FDSettings::getSettingsData(bool defaultSets)
     SettingsData sd;
     QString setsFilePath = defaultSets ? getSetsPrefix() + ".ini" : getSetsFile();
 
-    mINI::INIFile file(setsFilePath.toStdString());
+    mINI::INIFile file(TO_INI_FILE_PATH(setsFilePath));
 	mINI::INIStructure ini;
 	if (!file.read(ini))
 	{
@@ -63,7 +69,7 @@ FDSettings::SettingsData FDSettings::getSettingsData(bool defaultSets)
 
 void FDSettings::setSettingsData(FDSettings::SettingsData sd)
 {
-    mINI::INIFile file(getSetsFile().toStdString());
+    mINI::INIFile file(TO_INI_FILE_PATH(getSetsFile()));
     mINI::INIStructure ini;
 	if (!file.read(ini))
 	{

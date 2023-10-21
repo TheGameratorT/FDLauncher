@@ -18,7 +18,8 @@ launcher::installData ReadInstallDataToStruct(int gameId)
     QString gameDir = exeDir + "/game/wads/FD" + QString::number(gameId);
 
     QFile file(gameDir + "/install.dat");
-    if(!file.open(QIODevice::ReadOnly)) {
+    if(!file.open(QIODevice::ReadOnly))
+    {
         QMessageBox::information(0, "error", file.errorString());
     }
 
@@ -30,13 +31,21 @@ launcher::installData ReadInstallDataToStruct(int gameId)
     {
         QString line = in.readLine();
         if(line == "version=")
+        {
             data.version = line.split("version=")[1].toFloat();
+        }
         else if(line == "files=")
+        {
             filesLineFound = true;
+        }
         else if(filesLineFound && line == "[")
+        {
             insideFilesArray = true;
+        }
         else if(filesLineFound && line == "]")
+        {
             insideFilesArray = false;
+        }
         else if(insideFilesArray)
         {
             QString filePath = gameDir + "/" + line.remove('\t').remove(',');
@@ -88,9 +97,11 @@ void launcher::updateInstallDataForGame(int gameId)
     }
 }
 
-bool launcher::launchGame(launcher::startupData startData, QWidget* parent)
+bool launcher::launchGame(const launcher::startupData& startData, QWidget* parent)
 {
-	FDSettings fdsets(launcher::currentGame, parent);
+    bool cheatsOn = enableCheatsKeyDown();
+
+    FDSettings fdsets(launcher::currentGame, parent);
     FDSettings::SettingsData sd = fdsets.getSettingsData();
 
     QStringList args;
@@ -146,18 +157,28 @@ bool launcher::launchGame(launcher::startupData startData, QWidget* parent)
         break;
     }
 
+    if (cheatsOn)
+    {
+        args += "+sv_cheats";
+        args += "1";
+    }
+
     QProcess* gzdoom = new QProcess();
     gzdoom->setProgram(exeDir + "/game/gzdoom");
     gzdoom->setArguments(args);
     if(gzdoom->startDetached())
+    {
         return true;
+    }
     else
     {
 		//QApplication::beep();
         QString errorMsg = QObject::tr("An error has occurred while trying to launch the game.\n\nError details:\n");
         QFile file(gzdoom->program());
         if(!file.exists())
+        {
             errorMsg += "\"" + file.fileName() + "\" " + QObject::tr("wasn't found.");
+        }
         else
         {
             QMetaEnum metaEnum = QMetaEnum::fromType<QProcess::ProcessError>();
@@ -166,4 +187,9 @@ bool launcher::launchGame(launcher::startupData startData, QWidget* parent)
         QMessageBox::critical(parent, QObject::tr("Launch error!"), errorMsg);
         return false;
     }
+}
+
+bool launcher::enableCheatsKeyDown()
+{
+    return QApplication::keyboardModifiers() & Qt::KeyboardModifier::ShiftModifier;
 }

@@ -9,39 +9,49 @@
         <translation>Escolha um jogo!</translation>
     </message>
     <message>
-        <location filename="gameselectwindow.ui" line="242"/>
+        <location filename="gameselectwindow.ui" line="245"/>
         <source>Mod by SkorneDemon</source>
         <translation>Mod por SkorneDemon</translation>
     </message>
     <message>
-        <location filename="gameselectwindow.cpp" line="75"/>
+        <location filename="gameselectwindow.cpp" line="84"/>
         <source>Installation corrupted.</source>
         <translation>Instalação corrompida.</translation>
     </message>
     <message>
-        <location filename="gameselectwindow.cpp" line="75"/>
+        <location filename="gameselectwindow.cpp" line="84"/>
         <source>This installation is corrupted or is missing files. Would you like to reinstall it?</source>
         <translation>A está corrompida ou tem ficheiros em falta. Deseja reinstalá-la?</translation>
     </message>
     <message>
-        <location filename="gameselectwindow.cpp" line="82"/>
+        <location filename="gameselectwindow.cpp" line="91"/>
         <source>Installation missing.</source>
         <translation>Instalação em falta.</translation>
     </message>
     <message>
-        <location filename="gameselectwindow.cpp" line="82"/>
+        <location filename="gameselectwindow.cpp" line="91"/>
         <source>No installation of this game was found, would you like to download it?</source>
         <translation>Nenhuma instalação deste jogo foi encontrada, gostaria de fazer o download?</translation>
     </message>
     <message>
-        <location filename="gameselectwindow.cpp" line="88"/>
+        <location filename="gameselectwindow.cpp" line="97"/>
         <source>Not released.</source>
         <translation>Não lançado.</translation>
     </message>
     <message>
-        <location filename="gameselectwindow.cpp" line="88"/>
+        <location filename="gameselectwindow.cpp" line="97"/>
         <source>Not available.</source>
         <translation>Não disponível.</translation>
+    </message>
+    <message>
+        <location filename="gameselectwindow.cpp" line="144"/>
+        <source>About FDLauncher</source>
+        <translation>Sobre FDLauncher</translation>
+    </message>
+    <message>
+        <location filename="gameselectwindow.cpp" line="144"/>
+        <source>&lt;p&gt;&lt;strong&gt;Five Nights at Freddy&amp;#39;s Doom Launcher&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Coded by TheGameratorT&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Built with Qt 5.12.2, libvorbis, libogg and OpenAL Soft.&lt;/p&gt;&lt;p&gt;&lt;a style=&quot;color: #FF802B;&quot; href=&quot;https://github.com/TheGameratorT/FDLauncher&quot;&gt;https://github.com/TheGameratorT/FDLauncher&lt;/a&gt;&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;strong&gt;Five Nights at Freddy&amp;#39;s Doom Launcher&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Programado por TheGameratorT&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Feito com Qt 5.12.2, libvorbis, libogg e OpenAL Soft.&lt;/p&gt;&lt;p&gt;&lt;a style=&quot;color: #FF802B;&quot; href=&quot;https://github.com/TheGameratorT/FDLauncher&quot;&gt;https://github.com/TheGameratorT/FDLauncher&lt;/a&gt;&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -68,70 +78,6 @@
     </message>
 </context>
 <context>
-    <name>InfoDialog</name>
-    <message>
-        <location filename="infodialog.ui" line="14"/>
-        <source>About FDLauncher</source>
-        <translation>Sobre FDLauncher</translation>
-    </message>
-    <message>
-        <location filename="infodialog.ui" line="82"/>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Five Nights at Freddy&apos;s Doom Launcher&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Coded by TheGameratorT&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Built with Qt 5.12.2, libvorbis, libogg and OpenAL Soft.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://github.com/TheGameratorT/FDLauncher&quot;&gt;&lt;span style=&quot; font-size:10pt; text-decoration: underline; color:#007af4;&quot;&gt;https://github.com/TheGameratorT/FDLauncher&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; text-decoration: underline; color:#007af4;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <oldsource>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Five Nights at Freddy&apos;s Doom Launcher&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Coded by TheGameratorT&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Built with Qt 5.12.2, libvorbis, libogg and OpenAL Soft.&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://github.com/TheGameratorT/FDLauncher&quot;&gt;&lt;span style=&quot; font-size:8pt; text-decoration: underline; color:#007af4;&quot;&gt;https://github.com/TheGameratorT/FDLauncher&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt; text-decoration: underline; color:#007af4;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</oldsource>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Five Nights at Freddy&apos;s Doom Launcher&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Programado por TheGameratorT&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Feito com Qt 5.12.2, libvorbis, libogg e OpenAL Soft.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://github.com/TheGameratorT/FDLauncher&quot;&gt;&lt;span style=&quot; font-size:10pt; text-decoration: underline; color:#007af4;&quot;&gt;https://github.com/TheGameratorT/FDLauncher&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; text-decoration: underline; color:#007af4;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="infodialog.cpp" line="15"/>
-        <source>Close</source>
-        <translation>Fechar</translation>
-    </message>
-</context>
-<context>
     <name>QObject</name>
     <message>
         <location filename="fdsettings.cpp" line="25"/>
@@ -152,7 +98,7 @@ p, li { white-space: pre-wrap; }
         <translation>Ocurreu um erro ao tentar abrir a configuração.</translation>
     </message>
     <message>
-        <location filename="launcher.cpp" line="168"/>
+        <location filename="launcher.cpp" line="176"/>
         <source>An error has occurred while trying to launch the game.
 
 Error details:
@@ -163,12 +109,12 @@ Detalhes do erro:
 </translation>
     </message>
     <message>
-        <location filename="launcher.cpp" line="171"/>
+        <location filename="launcher.cpp" line="180"/>
         <source>wasn&apos;t found.</source>
         <translation>não foi encontrado.</translation>
     </message>
     <message>
-        <location filename="launcher.cpp" line="177"/>
+        <location filename="launcher.cpp" line="187"/>
         <source>Launch error!</source>
         <translation>Erro de lançamento!</translation>
     </message>
@@ -244,17 +190,17 @@ Detalhes do erro:
         <translation>Noite 6</translation>
     </message>
     <message>
+        <location filename="host_dialog.ui" line="162"/>
+        <source>???</source>
+        <translation></translation>
+    </message>
+    <message>
         <location filename="host_dialog.ui" line="176"/>
         <location filename="host_dialog.ui" line="269"/>
         <location filename="host_dialog.ui" line="337"/>
         <location filename="host_dialog.ui" line="395"/>
-        <source>Scene:</source>
-        <translation>Cena:</translation>
-    </message>
-    <message>
-        <location filename="host_dialog.ui" line="162"/>
-        <source>???</source>
-        <translation></translation>
+        <source>Map:</source>
+        <translation>Mapa:</translation>
     </message>
     <message>
         <location filename="host_dialog.ui" line="182"/>
@@ -350,6 +296,21 @@ Detalhes do erro:
         <location filename="host_dialog.ui" line="498"/>
         <source>Port:</source>
         <translation>Porta:</translation>
+    </message>
+    <message>
+        <location filename="host_dialog.ui" line="527"/>
+        <source>Not recommended</source>
+        <translation>Não recomendado</translation>
+    </message>
+    <message>
+        <location filename="host_dialog.cpp" line="63"/>
+        <source>About Packet Server mode</source>
+        <translation>Sobre o modo Servidor de Pacotes</translation>
+    </message>
+    <message>
+        <location filename="host_dialog.cpp" line="63"/>
+        <source>&lt;p&gt;Please consider using Peer-to-Peer mode instead.&lt;/p&gt;&lt;p&gt;Packet Server mode is &lt;strong&gt;not recommended&lt;/strong&gt;, as it is known to solve connectivity issues but comes at the cost of reduced stability, lag increase and synchronization issues.&lt;/p&gt;&lt;p&gt;We strongly recommend taking the proper measures to host the game in Peer-to-Peer mode. This alternative can provide a more stable gaming experience while maintaining better overall performance.&lt;/p&gt;&lt;p&gt;Learn more about ZDoom networking here:&lt;br /&gt;&lt;a style=&quot;color: #FF802B;&quot; href=&quot;https://forum.zdoom.org/viewtopic.php?t=45124&quot;&gt;https://forum.zdoom.org/viewtopic.php?t=45124&lt;/a&gt;&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Por favor considere usar o modo Ponto-a-Ponto.&lt;/p&gt;&lt;p&gt;O modo Servidor de Pacotes &lt;strong&gt;não é recomendado&lt;/strong&gt;, embora possa resolver alguns problemas de conectividade vem com o custo de estabilidade reduzida, aumento de lag e problemas de sincronização.&lt;/p&gt;&lt;p&gt;Recomendamos vivamente que tome as medidas adequadas para hospedar o jogo no modo Ponto-a-Ponto. Esta alternativa pode oferecer uma experiência de jogo mais estável, mantendo um melhor desempenho geral.&lt;/p&gt;&lt;p&gt;Aprenda mais sobre ZDoom multijogador aqui:&lt;br /&gt;&lt;a style=&quot;color: #FF802B;&quot; href=&quot;https://forum.zdoom.org/viewtopic.php?t=45124&quot;&gt;https://forum.zdoom.org/viewtopic.php?t=45124&lt;/a&gt;&lt;/p&gt;</translation>
     </message>
 </context>
 <context>

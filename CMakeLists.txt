@@ -112,9 +112,6 @@ set(PROJECT_SOURCES
     settings_dialog.cpp
     settings_dialog.h
     settings_dialog.ui
-    infodialog.cpp
-    infodialog.h
-    infodialog.ui
     audio.cpp
     audio.h
     resources.qrc

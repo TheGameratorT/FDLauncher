@@ -1,6 +1,8 @@
 #include "host_dialog.h"
 #include "ui_host_dialog.h"
 
+#include <QMessageBox>
+
 #include "launcher.h"
 
 static QString map_for_selection[4][13] = {
@@ -21,6 +23,8 @@ host_dialog::host_dialog(QWidget *parent) :
     for(int i = 1; i <= 4; i++)
         if(i != launcher::currentGame)
             ui->tabWidget->removeTab(ui->tabWidget->indexOf(this->findChild<QWidget*>("fd" + QString::number(i) + "_tab")));
+
+    ui->netmodewarn_btn->setVisible(false);
 }
 
 void host_dialog::on_host_btn_clicked()
@@ -47,6 +51,22 @@ void host_dialog::on_host_btn_clicked()
 void host_dialog::on_cancel_btn_clicked()
 {
     this->close();
+}
+
+void host_dialog::on_netmode_cb_currentIndexChanged(int index)
+{
+    ui->netmodewarn_btn->setVisible(index == 1);
+}
+
+void host_dialog::on_netmodewarn_btn_clicked()
+{
+    QMessageBox::information(this, tr("About Packet Server mode"), tr(
+"<p>Please consider using Peer-to-Peer mode instead.</p>"
+"<p>Packet Server mode is <strong>not recommended</strong>, as it is known to solve connectivity issues but comes at the cost of reduced stability, lag increase and synchronization issues.</p>"
+"<p>We strongly recommend taking the proper measures to host the game in Peer-to-Peer mode. This alternative can provide a more stable gaming experience while maintaining better overall performance.</p>"
+"<p>Learn more about ZDoom networking here:<br />"
+"<a style=\"color: #FF802B;\" href=\"https://forum.zdoom.org/viewtopic.php?t=45124\">https://forum.zdoom.org/viewtopic.php?t=45124</a></p>"
+));
 }
 
 host_dialog::~host_dialog()

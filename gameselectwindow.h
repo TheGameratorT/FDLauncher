@@ -37,5 +37,7 @@ private slots:
     void showEvent(QShowEvent*);
 	void on_info_btn_clicked();
 	void on_patreon_link_clicked();
+    void on_youtube_btn_clicked();
+    void on_patreon_btn_clicked();
 };
 #endif // GAMESELECTWINDOW_H

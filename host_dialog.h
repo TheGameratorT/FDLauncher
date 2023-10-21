@@ -20,6 +20,10 @@ private slots:
 
     void on_cancel_btn_clicked();
 
+    void on_netmodewarn_btn_clicked();
+
+    void on_netmode_cb_currentIndexChanged(int index);
+
 private:
     Ui::host_dialog *ui;
 };

@@ -2,7 +2,10 @@
     <qresource prefix="/">
         <file>resources/wheel.png</file>
         <file>resources/return.png</file>
+        <file>resources/youtube.png</file>
+        <file>resources/patreon.png</file>
         <file>resources/info.png</file>
+        <file>resources/warning.png</file>
         <file>resources/downarrow.png</file>
         <file>resources/spin_up_arrow.png</file>
         <file>resources/spin_down_arrow.png</file>
