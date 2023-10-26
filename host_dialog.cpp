@@ -5,13 +5,6 @@
 
 #include "launcher.h"
 
-static QString map_for_selection[4][13] = {
-	{"e1m1", "e1m0", "e1m2", "e1m3", "e1m4", "e1m5", "e1m6", "e1m7", "e1m8"},
-	{"e1m1", "e1m2", "e1m3", "e1m4", "e1m5", "e1m6", "e2m1", "e2m2", "e2m3", "e2m4", "e2m5", "e2m6", "e2m7"},
-	{"e1m1", "e1m2", "e1m3", "e1m4", "e1m5", "e1m6", "e1m7", "e1m8"},
-	{"e1m1", "e1m2", "e1m3", "e1m4", "e1m5", "e1m6"}
-};
-
 host_dialog::host_dialog(QWidget *parent) :
 	QDialog(parent),
 	ui(new Ui::host_dialog)
@@ -36,7 +29,7 @@ void host_dialog::on_host_btn_clicked()
 	data.port = ui->port_sb->value();
 
 	QComboBox* map_cb = this->findChild<QComboBox*>("fd" + QString::number(launcher::currentGame) + "_map_cb");
-	data.map = map_for_selection[launcher::currentGame-1][map_cb->currentIndex()];
+    data.map = launcher::mapForSelection[launcher::currentGame-1][map_cb->currentIndex()];
 
 	if(launcher::launchGame(data, this))
 	{

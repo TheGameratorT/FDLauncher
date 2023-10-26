@@ -44,6 +44,7 @@ public:
 
 	static int currentGame;
 	static installData installDataForGame[7]; //+1 because of padding
+    static QString mapForSelection[4][13];
 	static void updateInstallDataForGame(int gameId);
 	static bool launchGame(const startupData& startData, QWidget* parent = nullptr);
 	static bool enableCheatsKeyDown();

@@ -119,12 +119,12 @@ QTabBar::tab {
      </property>
      <item>
       <property name="text">
-       <string>Shelter</string>
+       <string>Night 0</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Before Midnight</string>
+       <string>The Beginning</string>
       </property>
      </item>
      <item>
@@ -159,7 +159,7 @@ QTabBar::tab {
      </item>
      <item>
       <property name="text">
-       <string>???</string>
+       <string>Strike Lazer Foxy</string>
       </property>
      </item>
     </widget>

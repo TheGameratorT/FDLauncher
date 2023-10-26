@@ -8,8 +8,23 @@
 #include <QProcess>
 #include <QFile>
 
+#ifdef _WIN32
+#define ENGINE_EXE "gzdoom.exe"
+#elif __APPLE__
+#define ENGINE_EXE "gzdoom_macos"
+#else
+#define ENGINE_EXE "gzdoom_linux"
+#endif
+
 int launcher::currentGame = 0;
 launcher::installData launcher::installDataForGame[7];
+
+QString launcher::mapForSelection[4][13] = {
+	{"e1m1", "e1m0", "e1m2", "e1m3", "e1m4", "e1m5", "e1m6", "e1m7", "e1m8"},
+	{"e1m1", "e1m2", "e1m3", "e1m4", "e1m5", "e1m6", "e2m1", "e2m2", "e2m3", "e2m4", "e2m5", "e2m6", "e2m7"},
+	{"e1m1", "e1m2", "e1m3", "e1m4", "e1m5", "e1m6", "e1m7", "e1m8"},
+	{"e1m1", "e1m2", "e1m3", "e1m4", "e1m5", "e1m6"}
+};
 
 launcher::installData ReadInstallDataToStruct(int gameId)
 {
@@ -101,8 +116,11 @@ bool launcher::launchGame(const launcher::startupData& startData, QWidget* paren
 {
 	bool cheatsOn = enableCheatsKeyDown();
 
-	FDSettings fdsets(launcher::currentGame, parent);
+	FDSettings fdsets(currentGame, parent);
 	FDSettings::SettingsData sd = fdsets.getSettingsData();
+
+	// WARN: Since FNAF Doom 1 v4.0, materials are always on, remove the line below to revert it (and in settings_dialog.cpp too)
+	sd.materials = true;
 
 	QStringList args;
 
@@ -124,6 +142,8 @@ bool launcher::launchGame(const launcher::startupData& startData, QWidget* paren
 		args += fileName;
 	}
 
+	args += "-iwad";
+	args += (exeDir + "/game/FNAFDoom.ipk3");
 	args += "-skill";
 	args += "1";
 	args += "-config";
@@ -135,7 +155,7 @@ bool launcher::launchGame(const launcher::startupData& startData, QWidget* paren
 		args += "-host";
 		args += "1";
 		args += "-map";
-		args += "e1m1";
+		args += mapForSelection[currentGame-1][0];
 		break;
 	case startupData::startupType::host:
 		args += "-host";
@@ -164,7 +184,7 @@ bool launcher::launchGame(const launcher::startupData& startData, QWidget* paren
 	}
 
 	QProcess* gzdoom = new QProcess();
-	gzdoom->setProgram(exeDir + "/game/gzdoom");
+	gzdoom->setProgram(exeDir + "/game/" ENGINE_EXE);
 	gzdoom->setArguments(args);
 	if(gzdoom->startDetached())
 	{

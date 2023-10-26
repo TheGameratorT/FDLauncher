@@ -80,20 +80,20 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="fdsettings.cpp" line="25"/>
-        <location filename="fdsettings.cpp" line="44"/>
-        <location filename="fdsettings.cpp" line="70"/>
+        <location filename="fdsettings.cpp" line="31"/>
+        <location filename="fdsettings.cpp" line="50"/>
+        <location filename="fdsettings.cpp" line="76"/>
         <source>Configuration error.</source>
         <translation>Erro de configuração.</translation>
     </message>
     <message>
-        <location filename="fdsettings.cpp" line="25"/>
+        <location filename="fdsettings.cpp" line="31"/>
         <source>The configuration files are missing, please reinstall the game.</source>
         <translation>Os ficheiros de configuração estão em falta, por favor reinstale o jogo.</translation>
     </message>
     <message>
-        <location filename="fdsettings.cpp" line="44"/>
-        <location filename="fdsettings.cpp" line="70"/>
+        <location filename="fdsettings.cpp" line="50"/>
+        <location filename="fdsettings.cpp" line="76"/>
         <source>An error occured trying to open the configuration.</source>
         <translation>Ocurreu um erro ao tentar abrir a configuração.</translation>
     </message>
@@ -130,16 +130,6 @@ Detalhes do erro:
         <location filename="host_dialog.ui" line="109"/>
         <source>FNAF 1</source>
         <translation></translation>
-    </message>
-    <message>
-        <location filename="host_dialog.ui" line="122"/>
-        <source>Shelter</source>
-        <translation>Abrigo</translation>
-    </message>
-    <message>
-        <location filename="host_dialog.ui" line="127"/>
-        <source>Before Midnight</source>
-        <translation>Antes da meia noite</translation>
     </message>
     <message>
         <location filename="host_dialog.ui" line="132"/>
@@ -190,8 +180,18 @@ Detalhes do erro:
         <translation>Noite 6</translation>
     </message>
     <message>
+        <location filename="host_dialog.ui" line="122"/>
+        <source>Night 0</source>
+        <translation>Noite 0</translation>
+    </message>
+    <message>
+        <location filename="host_dialog.ui" line="127"/>
+        <source>The Beginning</source>
+        <translation>O começo</translation>
+    </message>
+    <message>
         <location filename="host_dialog.ui" line="162"/>
-        <source>???</source>
+        <source>Strike Lazer Foxy</source>
         <translation></translation>
     </message>
     <message>

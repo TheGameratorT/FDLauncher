@@ -35,7 +35,7 @@ FDSettings::FDSettings(int gameId, QWidget* parent)
 	}
 }
 
-QString FDSettings::getSetsPrefix() { return exeDir + "/game/fd" + QString::number(gameId) + "_gzdoom"; }
+QString FDSettings::getSetsPrefix() { return exeDir + "/game/settings"/*"/game/fd" + QString::number(gameId) + "_gzdoom"*/; }
 QString FDSettings::getSetsFile() { return getSetsPrefix() + "-" + QDir::home().dirName() + ".ini"; }
 
 FDSettings::SettingsData FDSettings::getSettingsData(bool defaultSets)

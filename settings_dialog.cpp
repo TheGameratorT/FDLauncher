@@ -16,12 +16,15 @@ settings_dialog::settings_dialog(QWidget *parent) :
 	this->setFixedSize(this->size());
 	this->setWindowFlags(this->windowFlags() & ~Qt::WindowContextHelpButtonHint);
 
+	// WARN: Since FNAF Doom 1 v4.0, materials are always on, remove the line below to revert it (and in launcher.cpp too)
+	ui->mtls_cb->setVisible(false);
+
 	ui->buttonBox->button(QDialogButtonBox::Apply)->setText(tr("Apply"));
 	ui->buttonBox->button(QDialogButtonBox::Discard)->setText(tr("Discard"));
 	ui->buttonBox->button(QDialogButtonBox::RestoreDefaults)->setText(tr("Restore Defaults"));
 
 	resForIndex = resolution::getAvailableDisplayResolutions();
-	for(resolution::DisplayResolution res : resForIndex)
+	for(const resolution::DisplayResolution& res : qAsConst(resForIndex))
 	{
 		ui->res_cb->addItem(QString::number(res.width) + "x" + QString::number(res.height));
 	}
@@ -49,11 +52,15 @@ void settings_dialog::fillWidgetsWithSets(bool defSets)
 	{
 		int index = resForIndex.indexOf(resolution::DisplayResolution(sd.vid_scale_customwidth, sd.vid_scale_customheight));
 		if(index == -1)
+		{
 			index = resForIndex.length() - 1;
+		}
 		ui->res_cb->setCurrentIndex(index);
 	}
 	else
+	{
 		ui->res_cb->setCurrentIndex(resForIndex.length() - 1);
+	}
 
 	int i = 0;
 	for(const QString& lang : languageForIndex)
@@ -79,7 +86,9 @@ void settings_dialog::on_buttonBox_clicked(QAbstractButton *button)
 
 		bool isMaxRes = ui->res_cb->currentIndex() == resForIndex.length() - 1;
 		if(isMaxRes)
+		{
 			sd.vid_scalemode = 0;
+		}
 		else
 		{
 			sd.vid_scalemode = 5;
