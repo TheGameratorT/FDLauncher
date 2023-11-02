@@ -82,7 +82,7 @@
     <message>
         <location filename="fdsettings.cpp" line="31"/>
         <location filename="fdsettings.cpp" line="50"/>
-        <location filename="fdsettings.cpp" line="76"/>
+        <location filename="fdsettings.cpp" line="78"/>
         <source>Configuration error.</source>
         <translation>Erro de configuração.</translation>
     </message>
@@ -93,12 +93,12 @@
     </message>
     <message>
         <location filename="fdsettings.cpp" line="50"/>
-        <location filename="fdsettings.cpp" line="76"/>
+        <location filename="fdsettings.cpp" line="78"/>
         <source>An error occured trying to open the configuration.</source>
         <translation>Ocurreu um erro ao tentar abrir a configuração.</translation>
     </message>
     <message>
-        <location filename="launcher.cpp" line="176"/>
+        <location filename="launcher.cpp" line="193"/>
         <source>An error has occurred while trying to launch the game.
 
 Error details:
@@ -109,12 +109,12 @@ Detalhes do erro:
 </translation>
     </message>
     <message>
-        <location filename="launcher.cpp" line="180"/>
+        <location filename="launcher.cpp" line="197"/>
         <source>wasn&apos;t found.</source>
         <translation>não foi encontrado.</translation>
     </message>
     <message>
-        <location filename="launcher.cpp" line="187"/>
+        <location filename="launcher.cpp" line="204"/>
         <source>Launch error!</source>
         <translation>Erro de lançamento!</translation>
     </message>
@@ -303,12 +303,12 @@ Detalhes do erro:
         <translation>Não recomendado</translation>
     </message>
     <message>
-        <location filename="host_dialog.cpp" line="63"/>
+        <location filename="host_dialog.cpp" line="56"/>
         <source>About Packet Server mode</source>
         <translation>Sobre o modo Servidor de Pacotes</translation>
     </message>
     <message>
-        <location filename="host_dialog.cpp" line="63"/>
+        <location filename="host_dialog.cpp" line="56"/>
         <source>&lt;p&gt;Please consider using Peer-to-Peer mode instead.&lt;/p&gt;&lt;p&gt;Packet Server mode is &lt;strong&gt;not recommended&lt;/strong&gt;, as it is known to solve connectivity issues but comes at the cost of reduced stability, lag increase and synchronization issues.&lt;/p&gt;&lt;p&gt;We strongly recommend taking the proper measures to host the game in Peer-to-Peer mode. This alternative can provide a more stable gaming experience while maintaining better overall performance.&lt;/p&gt;&lt;p&gt;Learn more about ZDoom networking here:&lt;br /&gt;&lt;a style=&quot;color: #FF802B;&quot; href=&quot;https://forum.zdoom.org/viewtopic.php?t=45124&quot;&gt;https://forum.zdoom.org/viewtopic.php?t=45124&lt;/a&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;Por favor considere usar o modo Ponto-a-Ponto.&lt;/p&gt;&lt;p&gt;O modo Servidor de Pacotes &lt;strong&gt;não é recomendado&lt;/strong&gt;, embora possa resolver alguns problemas de conectividade vem com o custo de estabilidade reduzida, aumento de lag e problemas de sincronização.&lt;/p&gt;&lt;p&gt;Recomendamos vivamente que tome as medidas adequadas para hospedar o jogo no modo Ponto-a-Ponto. Esta alternativa pode oferecer uma experiência de jogo mais estável, mantendo um melhor desempenho geral.&lt;/p&gt;&lt;p&gt;Aprenda mais sobre ZDoom multijogador aqui:&lt;br /&gt;&lt;a style=&quot;color: #FF802B;&quot; href=&quot;https://forum.zdoom.org/viewtopic.php?t=45124&quot;&gt;https://forum.zdoom.org/viewtopic.php?t=45124&lt;/a&gt;&lt;/p&gt;</translation>
     </message>
@@ -461,7 +461,7 @@ Detalhes do erro:
     <message>
         <location filename="settings_dialog.ui" line="220"/>
         <source>Language:</source>
-        <translation>Idioma/Idioma:</translation>
+        <translation>Idioma:</translation>
     </message>
     <message>
         <location filename="settings_dialog.ui" line="227"/>
@@ -474,17 +474,17 @@ Detalhes do erro:
         <translation>Resolução:</translation>
     </message>
     <message>
-        <location filename="settings_dialog.cpp" line="19"/>
+        <location filename="settings_dialog.cpp" line="22"/>
         <source>Apply</source>
         <translation>Aplicar</translation>
     </message>
     <message>
-        <location filename="settings_dialog.cpp" line="20"/>
+        <location filename="settings_dialog.cpp" line="23"/>
         <source>Discard</source>
         <translation>Descartar</translation>
     </message>
     <message>
-        <location filename="settings_dialog.cpp" line="21"/>
+        <location filename="settings_dialog.cpp" line="24"/>
         <source>Restore Defaults</source>
         <translation>Restaurar</translation>
     </message>

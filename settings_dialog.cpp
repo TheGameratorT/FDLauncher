@@ -16,7 +16,7 @@ settings_dialog::settings_dialog(QWidget *parent) :
 	this->setFixedSize(this->size());
 	this->setWindowFlags(this->windowFlags() & ~Qt::WindowContextHelpButtonHint);
 
-	// WARN: Since FNAF Doom 1 v4.0, materials are always on, remove the line below to revert it (and in launcher.cpp too)
+	// WARN: Since FNAF Doom 1 v4.0, materials are always on, remove the line below to revert it (and in fdsettings.cpp too)
 	ui->mtls_cb->setVisible(false);
 
 	ui->buttonBox->button(QDialogButtonBox::Apply)->setText(tr("Apply"));

@@ -61,7 +61,9 @@ FDSettings::SettingsData FDSettings::getSettingsData(bool defaultSets)
 	sd.gl_bloom = QString::fromStdString(ini["Doom.ConsoleVariables"]["gl_bloom"]).toLower() == "true";
 	sd.language = QString::fromStdString(ini["Doom.ConsoleVariables"]["language"]);
 
-	sd.materials = QString::fromStdString(ini["FDLauncher"]["materials"]).toLower() == "true";
+	// WARN: Since FNAF Doom 1 v4.0, materials are always on, change the line below to revert it (and in settings_dialog.cpp too)
+	// and in setSettingsData too
+	sd.materials = true; //sd.materials = QString::fromStdString(ini["FDLauncher"]["materials"]).toLower() == "true";
 	sd.lowpoly = QString::fromStdString(ini["FDLauncher"]["lowpoly"]).toLower() == "true";
 
 	return sd;
@@ -87,7 +89,7 @@ void FDSettings::setSettingsData(FDSettings::SettingsData sd)
 	ini["Doom.ConsoleVariables"]["gl_bloom"] = sd.gl_bloom ? "true" : "false";
 	ini["Doom.ConsoleVariables"]["language"] = sd.language.toStdString();
 
-	ini["FDLauncher"]["materials"] = sd.materials ? "true" : "false";
+	//ini["FDLauncher"]["materials"] = sd.materials ? "true" : "false";
 	ini["FDLauncher"]["lowpoly"] = sd.lowpoly ? "true" : "false";
 
 	file.write(ini);

@@ -61,6 +61,8 @@ GameWindow::GameWindow(QWidget *parent) :
 		connect(&fd3_anim_timer, &QTimer::timeout, this, &GameWindow::fd3_anim_loop);
 	}
 
+	ui->version_label->setText("v" + getPrettyVersion());
+
 	// Play music
 
 	QFile bgMusicFile(":/music/fd" + currentGameStr + "_menu");
@@ -125,6 +127,20 @@ void GameWindow::static_anim_loop()
 		if(static_anim_frame > 6)
 			static_anim_frame = 0;
 	}
+}
+
+QString GameWindow::getPrettyVersion()
+{
+	const QString& version = launcher::installDataForGame[launcher::currentGame].version;
+	QStringList fields = version.split('.');
+
+	int fieldCount = fields.size();
+	for (int i = fieldCount; i < 3; i++) // make sure there are at least 3 fields
+	{
+		fields.append("0");
+	}
+
+	return fields.join(".");
 }
 
 void GameWindow::on_back_btn_clicked()

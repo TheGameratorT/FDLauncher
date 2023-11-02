@@ -45,9 +45,9 @@ launcher::installData ReadInstallDataToStruct(int gameId)
 	while(!in.atEnd())
 	{
 		QString line = in.readLine();
-		if(line == "version=")
+		if(line.startsWith("version="))
 		{
-			data.version = line.split("version=")[1].toFloat();
+			data.version = line.split('=')[1];
 		}
 		else if(line == "files=")
 		{
@@ -118,9 +118,6 @@ bool launcher::launchGame(const launcher::startupData& startData, QWidget* paren
 
 	FDSettings fdsets(currentGame, parent);
 	FDSettings::SettingsData sd = fdsets.getSettingsData();
-
-	// WARN: Since FNAF Doom 1 v4.0, materials are always on, remove the line below to revert it (and in settings_dialog.cpp too)
-	sd.materials = true;
 
 	QStringList args;
 

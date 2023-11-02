@@ -215,6 +215,25 @@ QComboBox QAbstractItemView {
     <bool>true</bool>
    </property>
   </widget>
+  <widget class="QLabel" name="version_label">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>270</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white;</string>
+   </property>
+   <property name="text">
+    <string notr="true">v#.#.#</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
   <zorder>fd3_anim_label</zorder>
   <zorder>static_anim_label</zorder>
   <zorder>bg_layer_label</zorder>
@@ -223,6 +242,7 @@ QComboBox QAbstractItemView {
   <zorder>back_btn</zorder>
   <zorder>sets_btn</zorder>
   <zorder>og_btn</zorder>
+  <zorder>version_label</zorder>
  </widget>
  <tabstops>
   <tabstop>sp_btn</tabstop>
@@ -232,7 +252,6 @@ QComboBox QAbstractItemView {
   <tabstop>back_btn</tabstop>
  </tabstops>
  <resources>
-  <include location="resources.qrc"/>
   <include location="resources.qrc"/>
  </resources>
  <connections/>

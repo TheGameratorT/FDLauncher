@@ -17,7 +17,7 @@ public:
 
 	struct installData
 	{
-		float version;
+		QString version;
 		QVector<QString> fileNames;
 		installState state;
 	};

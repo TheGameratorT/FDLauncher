@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QTimer>
+#include <QString>
 
 #include "audio.h"
 
@@ -46,6 +47,7 @@ private:
 
 	int close_mode;
 
+	QString getPrettyVersion();
 	void closeEvent(QCloseEvent* event);
 	static void fade_music_out(AudioStream* stream);
 	static void fade_music_out_quit(AudioStream* stream);
